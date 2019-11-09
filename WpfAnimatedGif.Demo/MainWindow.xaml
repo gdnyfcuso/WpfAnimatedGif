@@ -4,7 +4,7 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         gif:ImageBehavior.AnimateInDesignMode="True"
         WindowStartupLocation="CenterScreen"
-        Title="WPF Animated GIF demo" Height="640" Width="640">
+        Title="WPF Animated GIF demo" Height="640" Width="640" Loaded="Window_Loaded">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="boolToVis" />
         <Storyboard x:Key="Blink">
@@ -70,6 +70,7 @@
                 <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
                     <Button Name="btnClearImage" Content="Clear image" Click="btnClearImage_Click" Margin="5,0,0,5"  />
                     <Button Name="btnGC" Content="GC" Click="btnGC_Click" Margin="5,0,5,5" />
+                   <Button Name="btnPr" Content="Pr" Click="BtnPr_Click" Margin="5,0,5,5" />
                 </StackPanel>
                 
             </Grid>

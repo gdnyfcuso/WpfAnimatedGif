@@ -3,10 +3,12 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using Microsoft.VisualBasic;
 using Microsoft.Win32;
+using MotionCapture;
 
 namespace WpfAnimatedGif.Demo
 {
@@ -261,6 +263,17 @@ namespace WpfAnimatedGif.Demo
         private void btnClearImage_Click(object sender, RoutedEventArgs e)
         {
             SelectedImage = null;
+        }
+
+        private void BtnPr_Click(object sender, RoutedEventArgs e)
+        {
+            TP tp = new TP();
+            tp.Show();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            (Application.Current as App).TP.Close();
         }
     }
 }
